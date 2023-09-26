@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Geninfo from "../info-component";
 
-export default function shoplist(){
+export default function Shoplist(){
     return(
         <main>
             <h1>Shopping list</h1>
