@@ -4,18 +4,15 @@ export default function Infoshoppinglist(){
     return(
         <main>
             <li>
-                <ol><Item name = "orange juice" age = "2 weeks" category= "liquid" /></ol>
-                <ol><Item name = "" age = "" category= "" /></ol>
-                <ol><Item name = "" age = "" category= "" /></ol>
+                <ol><Item name = "orange juice" quantity = "2 weeks" category= "liquid" /></ol>
 
 
             </li>
-
+            
         </main>
 
     )
         
-
 }
 
 function Item ({ name, quantity, category }) {
