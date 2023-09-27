@@ -1,11 +1,12 @@
 
 import Link from "next/link";
-import Infoshoppinglist from "./item";
+import Item from "./item";
 
 export default function Mainshoppinglist(){
     return(
         <main>
-            <Infoshoppinglist />'
+            <h1>SHOPPING LIST: </h1>
+            <Item />
             
         </main>
 

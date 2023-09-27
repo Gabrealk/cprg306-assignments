@@ -1,10 +1,11 @@
 
-
-export default function Infoshoppinglist(){
+import Itemlist from "./item-list"
+<Itemlist />
+export default function Items(){
     return(
         <main>
             <li>
-                <ol><Item name = "orange juice" quantity = "2 weeks" category= "liquid" /></ol>
+                <ol><Item name ="" quantity = "2 weeks" category= "liquid" /></ol>
 
 
             </li>
