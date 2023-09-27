@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Item from "./item";
 
-export default function Mainshoppinglist(){
+export default function Mainshoppingpage(){
     return(
         <main>
             <h1>SHOPPING LIST: </h1>

@@ -6,9 +6,7 @@ export default function Items(){
         <main>
             <Itemlist />
         </main>
-
-    )
-        
+    )     
 }
 
 function Item ({ name, quantity, category }) {
@@ -17,7 +15,6 @@ function Item ({ name, quantity, category }) {
             <h1>{name}</h1>
             <p>The amount of items there are is: {quantity}</p>
             <p>The Item belongs in the {category} category</p>
-
         </main>
     )
 }
