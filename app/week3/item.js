@@ -4,12 +4,7 @@ import Itemlist from "./item-list"
 export default function Items(){
     return(
         <main>
-            <li>
-                <ol><Item name ="" quantity = "2 weeks" category= "liquid" /></ol>
-
-
-            </li>
-            
+            <Itemlist />
         </main>
 
     )
