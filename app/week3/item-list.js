@@ -1,9 +1,9 @@
 
 
-export default function Shoppinglist(){
+export default function Itemlist(){
     return(
         <main>
-
+            
 
         </main>
 
