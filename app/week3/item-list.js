@@ -75,11 +75,19 @@ export default function Itemlist(){
     return(        
         <main>
             <li>
-                <ol>
+              <button className="font-bold 
+              px-7 py-2 
+              text-black 
+              bg-green-400 
+              border-2 border-black m-4 rounded 
+              hover:bg-green-700">
+              <ol>
                     name = {item1.name}
                     quantity = {item1.quantity}
                     category = {item1.category}
                 </ol>
+              </button>
+                
 
                 <ol>
                     name = {item2.name}
