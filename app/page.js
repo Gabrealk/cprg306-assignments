@@ -7,8 +7,30 @@ export default function Home()
     <main>
       <h1>CPRG 306: Web dev 2 assignments</h1>
       <Geninfo /> 
-      <p><Link href="week2">Week 2</Link></p>
-      <p><Link href="week3">Week 3 *in progress* </Link></p>
+
+      <div>
+        <button className="font-bold 
+                px-7 py-2 
+                text-black 
+                bg-blue-700 
+                border-2 border-black m-4 rounded 
+                hover:bg-blue-500">
+          <p><Link href="week2">Week 2</Link></p>
+        </button>
+      </div>
+
+
+      <div>
+        <button className="font-bold 
+                px-7 py-2 
+                text-black 
+                bg-blue-700 
+                border-2 border-black m-4 rounded 
+                hover:bg-blue-500">
+          <p><Link href="week3">Week 3</Link></p>
+        </button>
+      </div>
+
     </main>
 
 
