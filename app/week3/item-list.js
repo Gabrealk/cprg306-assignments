@@ -75,171 +75,158 @@ export default function Itemlist(){
     return(        
         <main>
             <li>
-              <button className="font-bold 
+              <ol><button className="font-bold 
                 px-7 py-2 
                 text-black 
                 bg-green-400 
                 border-2 border-black m-4 rounded 
                 hover:bg-green-700">
-                  <ol>
-                    name = {item1.name}
-                    quantity = {item1.quantity}
-                    category = {item1.category}
-                  </ol>
-              </button>
+                  name = {item1.name}
+                  quantity = {item1.quantity}
+                  category = {item1.category} 
+              </button></ol>
+              
                 
-
-              <button className="font-bold 
+              <ol><button className="font-bold 
                 px-7 py-2 
                 text-black 
                 bg-green-400 
                 border-2 border-black m-4 rounded 
                 hover:bg-green-700">
-                  <ol>
-                    name = {item2.name}
-                    quantity = {item2.quantity}
-                    category = {item2.category}
-                  </ol>
-              </button>
+                name = {item2.name}
+                quantity = {item2.quantity}
+                category = {item2.category} 
+              </button></ol>
+              
 
-
-              <button className="font-bold 
+              <ol><button className="font-bold 
                 px-7 py-2 
                 text-black 
                 bg-green-400 
                 border-2 border-black m-4 rounded 
                 hover:bg-green-700">
-                  <ol>
-                    name = {item3.name}
-                    quantity = {item3.quantity}
-                    category = {item3.category}
-                  </ol>
-              </button>
+                
+                name = {item3.name}
+                quantity = {item3.quantity}
+                category = {item3.category}
+              </button></ol>
+              
 
 
-              <button className="font-bold 
+              <ol><button className="font-bold 
                 px-7 py-2 
                 text-black 
                 bg-green-400 
                 border-2 border-black m-4 rounded 
                 hover:bg-green-700">
-                  <ol>
-                    name = {item4.name}
-                    quantity = {item4.quantity}
-                    category = {item4.category}
-                  </ol>
-              </button>
+                
+                name = {item4.name}
+                quantity = {item4.quantity}
+                category = {item4.category}
+              </button></ol>
 
 
-              <button className="font-bold 
+              <ol><button className="font-bold 
                 px-7 py-2 
                 text-black 
                 bg-green-400 
                 border-2 border-black m-4 rounded 
                 hover:bg-green-700">
-                  <ol>
-                    name = {item5.name}
-                    quantity = {item5.quantity}
-                    category = {item5.category}
-                  </ol>
-              </button>
+                
+                name = {item5.name}
+                quantity = {item5.quantity}
+                category = {item5.category}
+              </button></ol>
 
 
-              <button className="font-bold 
+              <ol><button className="font-bold 
                 px-7 py-2 
                 text-black 
                 bg-green-400 
                 border-2 border-black m-4 rounded 
                 hover:bg-green-700">
-                  <ol>
-                    name = {item6.name}
-                    quantity = {item6.quantity}
-                    category = {item6.category}
-                  </ol>
-              </button>
+                
+                name = {item6.name}
+                quantity = {item6.quantity}
+                category = {item6.category}
+              </button></ol>
 
 
-              <button className="font-bold 
+              <ol><button className="font-bold 
                 px-7 py-2 
                 text-black 
                 bg-green-400 
                 border-2 border-black m-4 rounded 
                 hover:bg-green-700">
-                  <ol>
-                    name = {item7.name}
-                    quantity = {item7.quantity}
-                    category = {item7.category}
-                  </ol>
-              </button>
+                
+                name = {item7.name}
+                quantity = {item7.quantity}
+                category = {item7.category}
+              </button></ol>
 
-              <button className="font-bold 
+              <ol><button className="font-bold 
                 px-7 py-2 
                 text-black 
                 bg-green-400 
                 border-2 border-black m-4 rounded 
                 hover:bg-green-700">
-                  <ol>
-                    name = {item8.name}
-                    quantity = {item8.quantity}
-                    category = {item8.category}
-                  </ol>
-              </button>
+                
+                name = {item8.name}
+                quantity = {item8.quantity}
+                category = {item8.category}
+              </button></ol>
 
 
-              <button className="font-bold 
+              <ol><button className="font-bold 
                 px-7 py-2 
                 text-black 
                 bg-green-400 
                 border-2 border-black m-4 rounded 
                 hover:bg-green-700">
-                  <ol>
-                    name = {item9.name}
-                    quantity = {item9.quantity}
-                    category = {item9.category}
-                  </ol>
-              </button>
+                
+                name = {item9.name}
+                quantity = {item9.quantity}
+                category = {item9.category}
+              </button></ol>
 
 
-              <button className="font-bold 
+              <ol><button className="font-bold 
                 px-7 py-2 
                 text-black 
                 bg-green-400 
                 border-2 border-black m-4 rounded 
                 hover:bg-green-700">
-                  <ol>
-                    name = {item10.name}
-                    quantity = {item10.quantity}
-                    category = {item10.category}
-                  </ol>
-              </button>
+                
+                name = {item10.name}
+                quantity = {item10.quantity}
+                category = {item10.category}
+              </button></ol>
 
 
-              <button className="font-bold 
+              <ol><button className="font-bold 
                 px-7 py-2 
                 text-black 
                 bg-green-400 
                 border-2 border-black m-4 rounded 
                 hover:bg-green-700">
-                  <ol>
-                    name = {item11.name}
-                    quantity = {item11.quantity}
-                    category = {item11.category}
-                  </ol>
-              </button>
+                
+                name = {item11.name}
+                quantity = {item11.quantity}
+                category = {item11.category}
+              </button></ol>
 
 
-              <button className="font-bold 
+              <ol><button className="font-bold 
                 px-7 py-2 
                 text-black 
                 bg-green-400 
                 border-2 border-black m-4 rounded 
                 hover:bg-green-700">
-                  <ol>
-                    name = {item12.name}
-                    quantity = {item12.quantity}
-                    category = {item12.category}
-                  </ol>
-              </button>
+                
+                name = {item12.name}
+                quantity = {item12.quantity}
+                category = {item12.category}
+              </button></ol>
                 
 
             </li>
