@@ -5,7 +5,7 @@ export default function Home()
 {
   return (
     <main>
-      <h1>CPRG 306: Web dev 2 assignments</h1>
+      <font size = "10" ><h1>CPRG 306: Web dev 2 assignments</h1></font>
       <Geninfo /> 
 
       <div>

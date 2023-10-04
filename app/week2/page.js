@@ -4,7 +4,7 @@ import Geninfo from "../info-component";
 export default function Shoplist(){
     return(
         <main>
-            <h1>Shopping list</h1>
+            <font size = "10"><h1>Shopping list</h1></font>
             <Geninfo />
             <button className="font-bold 
                 px-7 py-2 
