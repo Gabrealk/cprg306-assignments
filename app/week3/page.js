@@ -15,7 +15,6 @@ export default function Mainshoppingpage(){
                 <p><Link href ="../">Go Back</Link></p>
             </button>
             
-            
         </main>
 
     )
