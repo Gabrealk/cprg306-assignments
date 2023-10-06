@@ -1,10 +1,14 @@
 import Link from "next/link";
+import Newevent from "./new-item";
 
 
 
 export default function usability(){
     return(
         <main>
+
+            <Newevent />
+
             <button className="font-bold 
                 px-7 py-2 
                 text-black 
