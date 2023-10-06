@@ -43,20 +43,21 @@ export default function Newevent(){
                 value={name} placeholder="Item name"
                 onChange={(nchange) => setName(nchange.target.value)}
                 required //makes the name field required in order to submit the form
-                color="black"
+                className="text-black"
                 />
                 {/*the change basically represents he event object */}
 
                 <label>Quantity:</label>
                 <input type="number"
                 value={quantity} min={1} max={99}
-                onChange={(qchange) => setName(qchange.target.value)}
+                onChange={(qchange) => setQuantity(qchange.target.value)}
                 required
+                className="text-black"
                 //same dealio as before
                 />
 
                 <label>Category:</label>
-                <select value={category} onChange={(cchange) => setName(cchange.target.value)}>
+                <select value={category} onChange={(cchange) => setCategory(cchange.target.value)} className="text-black" required>
                     <option value="produce">produce</option>
                     <option value="Dairy">Dairy</option>
                     <option value="Bakery">Bakery</option>
