@@ -38,8 +38,11 @@ export default function Newevent(){
     return(
         <main>
 
-        
-            <input type="text" value="name" placeholder="Item name" />
+            
+            <input type="text" 
+            value={name} placeholder="Item name"
+            onChange={(change) => setName(change.target.value)} 
+            />
 
 
             <form onSubmit="submitFunction(event)">
