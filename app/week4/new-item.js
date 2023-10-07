@@ -34,46 +34,56 @@ export default function Newevent(){
 
     //stuff in the return/main field is html/css etc
     return(
-        <main>
-            <form>
-                {/*used to input the items name and updates the value
-                based on the input*/}
-                <label>Item Name:</label>
-                <input type="text" 
-                value={name} placeholder="Item name"
-                onChange={(nchange) => setName(nchange.target.value)}
-                required //makes the name field required in order to submit the form
-                className="text-black"
-                />
-                {/*the change basically represents he event object */}
+        <main className="flex items-center justify-center bg-blue-900">
+            <form className="w-full max-w-md p-4">
+                <div className="mb-4">
+                    {/*used to input the items name and updates the value
+                    based on the input
+                    <label>Item Name:</label>*/}
+                    <input type="text" 
+                    value={name} placeholder="Item name"
+                    onChange={(nchange) => setName(nchange.target.value)}
+                    required //makes the name field required in order to submit the form
+                    className="text-black border rounded w-full py-2 px-3 leading-tight"
+                    />
+                    {/*the change basically represents he event object */}
 
-                <label>Quantity:</label>
-                <input type="number"
-                value={quantity} min={1} max={99}
-                onChange={(qchange) => setQuantity(qchange.target.value)}
-                required
-                className="text-black"
-                //same dealio as before
-                />
+                </div>
+                
+                <div className="mb-4">
+                    <label>Quantity: </label>
+                    <input type="number"
+                    value={quantity} min={1} max={99}
+                    onChange={(qchange) => setQuantity(qchange.target.value)}
+                    required
+                    className="text-black border rounded w-half py-2 px-3 leading-tight"
+                    //same dealio as before
+                    />
 
-                <label>Category:</label>
-                <select value={category} onChange={(cchange) => setCategory(cchange.target.value)} className="text-black" required>
-                    <option value="produce">produce</option>
-                    <option value="Dairy">Dairy</option>
-                    <option value="Bakery">Bakery</option>
-                    <option value="Meat">Meat</option>
-                    <option value="Frozen Foods">Frozen Foods</option>
-                    <option value="Canned Goods">Canned Goods</option>
-                    <option value="Dry Goods">Dry Goods</option>
-                    <option value="Beverages">Beverages</option>
-                    <option value="Snacks">Snacks</option>
-                    <option value="household">produce</option>
-                    <option value="Other">Other</option>
-                </select>
-                {/*above select statement gives the user different options
-                 to choose from with the variables stated*/}
-
-                <button type="submit">Add Item</button>
+                    <label>Category: </label>
+                    <select value={category} onChange={(cchange) => setCategory(cchange.target.value)} 
+                    className="text-black border rounded w-half py-2 px-3 leading-tight" 
+                    required>
+                        <option value="produce">produce</option>
+                        <option value="Dairy">Dairy</option>
+                        <option value="Bakery">Bakery</option>
+                        <option value="Meat">Meat</option>
+                        <option value="Frozen Foods">Frozen Foods</option>
+                        <option value="Canned Goods">Canned Goods</option>
+                        <option value="Dry Goods">Dry Goods</option>
+                        <option value="Beverages">Beverages</option>
+                        <option value="Snacks">Snacks</option>
+                        <option value="household">produce</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    {/*above select statement gives the user different options
+                    to choose from with the variables stated*/}
+                </div>
+                
+                <div>
+                    <button type="submit">Add Item</button>
+                </div>
+                
 
             </form>
 
