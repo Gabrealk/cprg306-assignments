@@ -60,7 +60,7 @@ export default function Newevent(){
                     //same dealio as before
                     />
 
-                    <label>Category: </label>
+                    <label className="px-0.5">Category: </label>
                     <select value={category} onChange={(cchange) => setCategory(cchange.target.value)} 
                     className="text-black border rounded w-half py-2 px-3 leading-tight" 
                     required>
@@ -81,7 +81,7 @@ export default function Newevent(){
                 </div>
                 
                 <div>
-                    <button type="submit">Add Item</button>
+                    <button className="bg-white text-black rounded w-full py-2 px-3 leading-tight" type="submit">Add Item</button>
                 </div>
                 
 
