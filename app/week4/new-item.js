@@ -35,7 +35,7 @@ export default function Newevent(){
     //stuff in the return/main field is html/css etc
     return(
         <main className="flex items-center justify-center bg-blue-900">
-            <form className="w-full max-w-md p-4">
+            <form className="max-w-md p-4">
                 <div className="mb-4">
                     {/*used to input the items name and updates the value
                     based on the input
