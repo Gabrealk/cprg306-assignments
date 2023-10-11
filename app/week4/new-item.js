@@ -26,7 +26,7 @@ export default function Newevent(){
 
         //backticks ``` are used for implementing literals, or embedded expressions
         //window alert when submitted pre sure
-        window.alert(`Item: ${Items.name}, Quantity: ${Items.quantity}, Category: ${Items.category}`);
+        alert(`Item: ${name}, Quantity: ${quantity}, Category: ${category}`);
       };
 
 
@@ -35,7 +35,7 @@ export default function Newevent(){
     //stuff in the return/main field is html/css etc
     return(
         <main className="flex items-center justify-center bg-blue-900">
-            <form className="max-w-md p-4">
+            <form className="max-w-md p-4" onSubmit={submitFunction}>
                 <div className="mb-4">
                     {/*used to input the items name and updates the value
                     based on the input
@@ -44,13 +44,11 @@ export default function Newevent(){
                     value={name} placeholder="Item name"
                     onChange={(nchange) => setName(nchange.target.value)}
                     required //makes the name field required in order to submit the form
-                    className="text-black border rounded w-full py-2 px-3 leading-tight"
+                    className="text-black border rounded w-full py-2 px-3 leading-tight mb-4"
                     />
-                    {/*the change basically represents he event object */}
+                    {/*the change basically represents the event object */}
 
-                </div>
                 
-                <div className="mb-4">
                     <label>Quantity: </label>
                     <input type="number"
                     value={quantity} min={1} max={99}
@@ -61,7 +59,7 @@ export default function Newevent(){
                     />
 
                     <label className="px-0.5">Category: </label>
-                    <select value={category} onChange={(cchange) => setCategory(cchange.target.value)} 
+                    <select type ="text" value={category} onChange={(cchange) => setCategory(cchange.target.value)} 
                     className="text-black border rounded w-half py-2 px-3 leading-tight" 
                     required>
                         <option value="produce">produce</option>
