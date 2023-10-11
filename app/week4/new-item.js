@@ -28,6 +28,11 @@ export default function Newevent(){
         //backticks ``` are used for implementing literals, or embedded expressions
         //window alert when submitted pre sure
         alert(`Item: ${name}, Quantity: ${quantity}, Category: ${category}`);
+
+        //reset the form, by setting states back to normal
+        setName("");
+        setQuantity(1);
+        setCategory("produce");
       };
 
     //stuff in the return/main field is html/css etc
@@ -81,7 +86,7 @@ export default function Newevent(){
                         <p><Link href ="../">Go Back</Link></p>
                     </button>
                 </div>
-                
+
             </form>
             
         </main>
