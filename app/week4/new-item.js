@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 import { useState } from "react"
 
@@ -29,9 +30,6 @@ export default function Newevent(){
         alert(`Item: ${name}, Quantity: ${quantity}, Category: ${category}`);
       };
 
-
-
-
     //stuff in the return/main field is html/css etc
     return(
         <main className="flex items-center justify-center bg-blue-900">
@@ -40,22 +38,21 @@ export default function Newevent(){
                     {/*used to input the items name and updates the value
                     based on the input
                     <label>Item Name:</label>*/}
-                    <input type="text" 
-                    value={name} placeholder="Item name"
-                    onChange={(nchange) => setName(nchange.target.value)}
-                    required //makes the name field required in order to submit the form
-                    className="text-black border rounded w-full py-2 px-3 leading-tight mb-4"
+                    <input type="text"
+                        value={name} placeholder="Item name"
+                        onChange={(nchange) => setName(nchange.target.value)}
+                        required //makes the name field required in order to submit the form
+                        className="text-black border rounded w-full py-2 px-3 leading-tight mb-4"
                     />
                     {/*the change basically represents the event object */}
 
-                
                     <label>Quantity: </label>
                     <input type="number"
-                    value={quantity} min={1} max={99}
-                    onChange={(qchange) => setQuantity(qchange.target.value)}
-                    required
-                    className="text-black border rounded w-half py-2 px-3 leading-tight"
-                    //same dealio as before
+                        value={quantity} min={1} max={99}
+                        onChange={(qchange) => setQuantity(qchange.target.value)}
+                        required
+                        className="text-black border rounded w-half py-2 px-3 leading-tight"
+                        //same dealio as before
                     />
 
                     <label className="px-0.5">Category: </label>
@@ -80,11 +77,13 @@ export default function Newevent(){
                 
                 <div>
                     <button className="bg-white text-black rounded w-full py-2 px-3 leading-tight" type="submit">Add Item</button>
+                    <button className="bg-white text-black rounded w-full py-2 px-3 leading-tight mt-4">
+                        <p><Link href ="../">Go Back</Link></p>
+                    </button>
                 </div>
                 
-
             </form>
-
+            
         </main>
     )
 }
