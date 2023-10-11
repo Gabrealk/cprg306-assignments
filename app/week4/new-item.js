@@ -33,7 +33,7 @@ export default function Newevent(){
         setName("");
         setQuantity(1);
         setCategory("produce");
-      };
+    };
 
     //stuff in the return/main field is html/css etc
     return(
