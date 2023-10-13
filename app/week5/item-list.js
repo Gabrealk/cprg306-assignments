@@ -1,4 +1,28 @@
+"use client";
+import { useState } from "react"
+import Item from './item';
+import items from './items.json'
+
+
 export default function Itemlist(){
+
+  const [sortBy, setSortBy] = useState("name");
+
+  let itemArray = items.map(item => ({
+    
+    name: item.name,
+    category: item.category,
+  }));
+  
+  
+  //sorting function, squiggly lines of code mean multiple lines of code
+    itemArray = itemArray.sort((a, b) => {
+      return a.name - b.name;
+    });
+
+    
+
+
 
     const item1 = {
         name: "milk, 4 L 🥛",
@@ -74,6 +98,15 @@ export default function Itemlist(){
 
     return(        
         <main>
+            <div className="flex-1">
+              <label>Sort by:</label>
+              <select>
+                <option value="name">Name:</option>
+                <option value="category">Category:</option>
+              </select>
+
+            </div>
+
             <li>
               <ol><button className="font-bold 
                 px-7 py-2 
