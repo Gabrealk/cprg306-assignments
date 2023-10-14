@@ -22,8 +22,6 @@ export default function Itemlist(){
 
     
 
-
-
     const item1 = {
         name: "milk, 4 L 🥛",
         quantity: 1,
@@ -98,6 +96,14 @@ export default function Itemlist(){
 
     return(        
         <main>
+
+            <div>
+              <label for="sort">Sort by:</label>
+              <button value="" className="bg-orange-500 p-1 m-2 w-28">Name</button>
+              <button className="bg-orange-500 p-1 m-2 w-28">Category</button>
+              <button className="bg-orange-500 p-1 m-2 w-28">Grouped</button>
+
+            </div>
             <div className="flex-1">
               <label>Sort by:</label>
               <select>
