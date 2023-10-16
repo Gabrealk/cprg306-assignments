@@ -49,7 +49,7 @@ export default function Home()
                 bg-blue-700 
                 border-2 border-black m-4 rounded 
                 hover:bg-blue-500">
-          <p><Link href="week5">Week 5 *IN PROGRESSS*</Link></p>
+          <p><Link href="week5">Week 5</Link></p>
         </button>
       </div>
 
