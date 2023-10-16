@@ -1,11 +1,13 @@
 import Link from "next/link";
 import Item from "./item";
+import Itemlist from "./item-list";
+
 
 export default function Mainshoppingpage(){
     return(
         <main>
             <font size = "10"><h1>SHOPPING LIST: </h1></font>
-            <Item />
+            <Itemlist />
             <button className="font-bold 
                 px-7 py-2 
                 text-black 

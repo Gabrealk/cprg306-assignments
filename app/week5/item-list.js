@@ -1,278 +1,66 @@
 "use client";
-import { useState } from "react"
+import { useState } from "react";
+
 import Item from './item';
-import items from './items.json'
+import itemsData from './itemsData.json';
 
 
 export default function Itemlist(){
 
+  //state variable
   const [sortBy, setSortBy] = useState("name");
 
-  let itemArray = items.map(item => ({
+  //sort the items
+  const itemArray = [...itemsData]; // Make a copy of the itemsData array.
+
+  // Sort the items array based on the sortBy state variable
+  itemArray.sort((a, b) => {
+
+    if (sortBy === "name") {
+      return a.name.localeCompare(b.name);
+    } 
+
+    else if (sortBy === "category") 
+    {
+      return a.category.localeCompare(b.category);
+    }
+
+    else if (sortBy === "grouped")
+    {
+      return a.grouped.localeCompare(b.grouped);
+    }
+    //if it matches to 0 it keeps them in its original place unchanged
+    return 0;
+  });
     
-    name: item.name,
-    category: item.category,
-  }));
-  
-  
-  //sorting function, squiggly lines of code mean multiple lines of code
-    itemArray = itemArray.sort((a, b) => {
-      return a.name - b.name;
-    });
+  // Create Sort Buttons and handle sorting
+  const handleNameSort = () => setSortBy("name");
+  const handleCategorySort = () => setSortBy("category");
+  const handleGroupedSort = () => setSortBy("grouped");
 
-    
+  //creating the sort buttons, quick side note triple === sign is a comparison between the data type and value
+  const NameSorted = sortBy === "name";
+  const CategorySorted = sortBy === "category";
+  const GroupedSorted = sortBy === "grouped";
 
-    const item1 = {
-        name: "milk, 4 L 🥛",
-        quantity: 1,
-        category: "dairy",
-      };
+  //so you can view in the console of what you have, in this case the array from the json file
+  //console.log(itemArray);
 
-      const item2 = {
-        name: "bread 🍞",
-        quantity: 2,
-        category: "bakery",
-      };
-       
-      const item3 = {
-        name: "eggs, dozen 🥚",
-        quantity: 2,
-        category: "dairy",
-      };
-       
-      const item4 = {
-        name: "bananas 🍌",
-        quantity: 6,
-        category: "produce",
-      };
-       
-      const item5 = {
-        name: "broccoli 🥦",
-        quantity: 3,
-        category: "produce",
-      };
-       
-      const item6 = {
-        name: "chicken breasts, 1 kg 🍗",
-        quantity: 1,
-        category: "meat",
-      };
-       
-      const item7 = {
-        name: "pasta sauce 🍝",
-        quantity: 3,
-        category: "canned goods",
-      };
-       
-      const item8 = {
-        name: "spaghetti, 454 g 🍝",
-        quantity: 2,
-        category: "dry goods",
-      };
-       
-      const item9 = {
-        name: "toilet paper, 12 pack 🧻",
-        quantity: 1,
-        category: "household",
-      };
-       
-      const item10 = {
-        name: "paper towels, 6 pack",
-        quantity: 1,
-        category: "household",
-      };
-       
-      const item11 = {
-        name: "dish soap 🍽️",
-        quantity: 1,
-        category: "household",
-      };
-       
-      const item12 = {
-        name: "hand soap 🧼",
-        quantity: 4,
-        category: "household",
-      };
+  return(        
+    <main>
 
-    return(        
-        <main>
+      <div>
+        <label>Sort by:</label>
+        <button onClick={handleNameSort} className={`bg-orange-500 p-1 m-2 w-28 ${NameSorted}`}>Name</button>
+        <button onClick={handleCategorySort} className={`bg-orange-500 p-1 m-2 w-28 ${CategorySorted}`}>Category</button>
+        <button onClick={handleGroupedSort} className={`bg-orange-500 p-1 m-2 w-28 ${GroupedSorted}`}>Grouped</button>
+      </div>
 
-            <div>
-              <label for="sort">Sort by:</label>
-              <button value="" className="bg-orange-500 p-1 m-2 w-28">Name</button>
-              <button className="bg-orange-500 p-1 m-2 w-28">Category</button>
-              <button className="bg-orange-500 p-1 m-2 w-28">Grouped</button>
+      <section>
+        {itemArray.map((item) => (<Item item={item} key={item.id} />))}
+      </section>
 
-            </div>
-            <div className="flex-1">
-              <label>Sort by:</label>
-              <select>
-                <option value="name">Name:</option>
-                <option value="category">Category:</option>
-              </select>
-
-            </div>
-
-            <li>
-              <ol><button className="font-bold 
-                px-7 py-2 
-                text-black 
-                bg-green-400 
-                border-2 border-black m-4 rounded 
-                hover:bg-green-700">
-                  name = {item1.name}
-                  quantity = {item1.quantity}
-                  category = {item1.category} 
-              </button></ol>
-              
-                
-              <ol><button className="font-bold 
-                px-7 py-2 
-                text-black 
-                bg-green-400 
-                border-2 border-black m-4 rounded 
-                hover:bg-green-700">
-                name = {item2.name}
-                quantity = {item2.quantity}
-                category = {item2.category} 
-              </button></ol>
-              
-
-              <ol><button className="font-bold 
-                px-7 py-2 
-                text-black 
-                bg-green-400 
-                border-2 border-black m-4 rounded 
-                hover:bg-green-700">
-                
-                name = {item3.name}
-                quantity = {item3.quantity}
-                category = {item3.category}
-              </button></ol>
-              
-
-
-              <ol><button className="font-bold 
-                px-7 py-2 
-                text-black 
-                bg-green-400 
-                border-2 border-black m-4 rounded 
-                hover:bg-green-700">
-                
-                name = {item4.name}
-                quantity = {item4.quantity}
-                category = {item4.category}
-              </button></ol>
-
-
-              <ol><button className="font-bold 
-                px-7 py-2 
-                text-black 
-                bg-green-400 
-                border-2 border-black m-4 rounded 
-                hover:bg-green-700">
-                
-                name = {item5.name}
-                quantity = {item5.quantity}
-                category = {item5.category}
-              </button></ol>
-
-
-              <ol><button className="font-bold 
-                px-7 py-2 
-                text-black 
-                bg-green-400 
-                border-2 border-black m-4 rounded 
-                hover:bg-green-700">
-                
-                name = {item6.name}
-                quantity = {item6.quantity}
-                category = {item6.category}
-              </button></ol>
-
-
-              <ol><button className="font-bold 
-                px-7 py-2 
-                text-black 
-                bg-green-400 
-                border-2 border-black m-4 rounded 
-                hover:bg-green-700">
-                
-                name = {item7.name}
-                quantity = {item7.quantity}
-                category = {item7.category}
-              </button></ol>
-
-              <ol><button className="font-bold 
-                px-7 py-2 
-                text-black 
-                bg-green-400 
-                border-2 border-black m-4 rounded 
-                hover:bg-green-700">
-                
-                name = {item8.name}
-                quantity = {item8.quantity}
-                category = {item8.category}
-              </button></ol>
-
-
-              <ol><button className="font-bold 
-                px-7 py-2 
-                text-black 
-                bg-green-400 
-                border-2 border-black m-4 rounded 
-                hover:bg-green-700">
-                
-                name = {item9.name}
-                quantity = {item9.quantity}
-                category = {item9.category}
-              </button></ol>
-
-
-              <ol><button className="font-bold 
-                px-7 py-2 
-                text-black 
-                bg-green-400 
-                border-2 border-black m-4 rounded 
-                hover:bg-green-700">
-                
-                name = {item10.name}
-                quantity = {item10.quantity}
-                category = {item10.category}
-              </button></ol>
-
-
-              <ol><button className="font-bold 
-                px-7 py-2 
-                text-black 
-                bg-green-400 
-                border-2 border-black m-4 rounded 
-                hover:bg-green-700">
-                
-                name = {item11.name}
-                quantity = {item11.quantity}
-                category = {item11.category}
-              </button></ol>
-
-
-              <ol><button className="font-bold 
-                px-7 py-2 
-                text-black 
-                bg-green-400 
-                border-2 border-black m-4 rounded 
-                hover:bg-green-700">
-                
-                name = {item12.name}
-                quantity = {item12.quantity}
-                category = {item12.category}
-              </button></ol>
-                
-
-            </li>
-            
-        </main>
-
-    )
+    </main>
+  )
         
-
 }

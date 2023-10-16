@@ -1,20 +1,11 @@
 
-import Itemlist from "./item-list"
-<Itemlist />
-export default function Items(){
-    return(
-        <main>
-            <Itemlist />
-        </main>
-    )     
-}
 
-function Item ({ name, quantity, category }) {
+export default function Item ({item}) {
     return(
         <main>
-            <h1>{name}</h1>
-            <p>The amount of items there are is: {quantity}</p>
-            <p>The Item belongs in the {category} category</p>
+            <h1>{item.name}</h1>
+            <p>The amount of items there are is: {item.quantity}</p>
+            <p>The Item belongs in the {item.category} category</p>
         </main>
-    )
+    );
 }
