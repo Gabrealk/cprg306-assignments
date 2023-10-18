@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Newevent from "./new-item";
+import newItem from "./new-item";
 
 
 
@@ -7,7 +7,7 @@ export default function usability(){
     return(
         <main>
 
-            <Newevent />
+            <newItem />
 
             {/*<button className="font-bold 
                 px-7 py-2 

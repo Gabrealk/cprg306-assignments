@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { useState } from "react"
 
-export default function newItem(){
+export default function Newitem2(){
     //quick side note things not in the return thingy
     //is considered js pre sure
 
@@ -37,8 +37,8 @@ export default function newItem(){
 
     //stuff in the return/main field is html/css etc
     return(
-        <main className="flex items-center justify-center bg-blue-900">
-            <form className="max-w-md p-4" onSubmit={submitFunction}>
+        <main className="flex items-center justify-left ">
+            <form className="max-w-md p-2" onSubmit={submitFunction}>
                 <div className="mb-4">
                     {/*used to input the items name and updates the value
                     based on the input
@@ -81,10 +81,7 @@ export default function newItem(){
                 </div>
                 
                 <div>
-                    <button className="bg-white text-black rounded w-full py-2 px-3 leading-tight" type="submit">Add Item</button>
-                    <button className="bg-white text-black rounded w-full py-2 px-3 leading-tight mt-4">
-                        <p><Link href ="../">Go Back</Link></p>
-                    </button>
+                    <button className="bg-blue-500 text-white rounded w-full py-2 px-3 leading-tight" type="submit">Add Item</button>       
                 </div>
 
             </form>
