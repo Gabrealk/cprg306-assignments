@@ -56,10 +56,10 @@ export default function Itemlist(){
     <main>
 
       <div>
-        <label>Sort by:</label>
+        <label className="pl-2">Sort by:</label>
         <button onClick={handleNameSort} className={`bg-orange-500 hover:bg-orange-700 p-1 m-2 w-28 ${NameSorted}`}>Name</button>
         <button onClick={handleCategorySort} className={`bg-orange-500 hover:bg-orange-700 p-1 m-2 w-28 ${CategorySorted}`}>Category</button>
-        <button onClick={handleGroupedSort} className={`bg-orange-500 hover:bg-orange-700 p-1 m-2 w-28 ${GroupedSorted}`}>Grouped</button>
+        {/*<button onClick={handleGroupedSort} className={`bg-orange-500 hover:bg-orange-700 p-1 m-2 w-28 ${GroupedSorted}`}>Grouped</button> */}
       </div>
 
       <section>

@@ -1,14 +1,17 @@
+"use client";
+
 import Link from "next/link";
 import Item from "./item";
 import Itemlist from "./item-list";
 import Newitem2 from "./new-item";
+import itemsData from './itemsData.json';
 
 
 export default function Mainshoppingpage(){
     return(
         <main>
             <font size = "10"><h1>SHOPPING LIST: </h1></font>
-            <font size="5"><h2 className="font-bold">Add A New Item</h2></font>
+            <font size="5"><h2 className="font-bold pl-2">Add A New Item</h2></font>
             <Newitem2 />
 
             <Itemlist />
