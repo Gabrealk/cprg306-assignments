@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { useState } from "react"
 
-export default function newItem(){
+export default function Newitem(){
     //quick side note things not in the return thingy
     //is considered js pre sure
 

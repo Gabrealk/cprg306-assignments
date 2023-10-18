@@ -8,7 +8,7 @@ export default function Mainshoppingpage(){
     return(
         <main>
             <font size = "10"><h1>SHOPPING LIST: </h1></font>
-            <font size="5"><h2>Add A New Item</h2></font>
+            <font size="5"><h2 className="font-bold">Add A New Item</h2></font>
             <Newitem2 />
 
             <Itemlist />
