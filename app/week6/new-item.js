@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { useState } from "react"
 
-export default function Newitem2(){
+export default function Newitem2({onAddItem}){
     //quick side note things not in the return thingy
     //is considered js pre sure
 
@@ -23,11 +23,14 @@ export default function Newitem2(){
         };
 
         //logs the items to the console
-        console.log(Items);
+        //console.log(Items);
 
         //backticks ``` are used for implementing literals, or embedded expressions
         //window alert when submitted pre sure
-        alert(`Item: ${name}, Quantity: ${quantity}, Category: ${category}`);
+        //alert(`Item: ${name}, Quantity: ${quantity}, Category: ${category}`);
+
+        //additem prop and passes the new item object stated above
+        onAddItem(Items);
 
         //reset the form, by setting states back to normal
         setName("");

@@ -1,17 +1,16 @@
 "use client";
 import { useState } from "react";
-
 import Item from './item';
-import itemsData from './itemsData.json';
 
 
-export default function Itemlist(){
+export default function Itemlist({items}){
 
+  
   //state variable
   const [sortBy, setSortBy] = useState("name");
 
   //sort the items into a new array
-  const itemArray = [...itemsData]; // essentially Makes a copy of the itemsData array.
+  const itemArray = [...items]; // essentially Makes a copy of the itemsData array.
 
   // Sort the items array based on the sortBy state variable
   itemArray.sort((a, b) => {
@@ -40,12 +39,12 @@ export default function Itemlist(){
   //Create Sort Buttons and handle sorting
   const handleNameSort = () => setSortBy("name");
   const handleCategorySort = () => setSortBy("category");
-  const handleGroupedSort = () => setSortBy("grouped");
+  //const handleGroupedSort = () => setSortBy("grouped");
 
   //creating the sort buttons, quick side note triple === sign is a comparison between the data type and value for the if statements
   const NameSorted = sortBy === "name";
   const CategorySorted = sortBy === "category";
-  const GroupedSorted = sortBy === "grouped";
+  //const GroupedSorted = sortBy === "grouped";
 
   //^^^^^^^^^^^^ both sorts are essential in order dor the buttons to work with the sorting associated with it
 
