@@ -1,11 +1,10 @@
-"use client";
+import itemsData from './itemsData.json';
 import { useState } from "react";
 import Item from './item';
 
 
 export default function Itemlist({items}){
 
-  
   //state variable
   const [sortBy, setSortBy] = useState("name");
 

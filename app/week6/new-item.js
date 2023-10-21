@@ -16,21 +16,21 @@ export default function Newitem2({onAddItem}){
         event.preventDefault();
         
         //creates the object with the values above
-        const Items = {
+        const NewItems = {
             name,
             quantity,
             category,
         };
 
         //logs the items to the console
-        //console.log(Items);
+        console.log(NewItems);
 
         //backticks ``` are used for implementing literals, or embedded expressions
         //window alert when submitted pre sure
         //alert(`Item: ${name}, Quantity: ${quantity}, Category: ${category}`);
 
         //additem prop and passes the new item object stated above
-        onAddItem(Items);
+        onAddItem(NewItems);
 
         //reset the form, by setting states back to normal
         setName("");
