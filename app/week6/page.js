@@ -1,8 +1,6 @@
 "use client";
-
 import { useState } from "react";
 import Link from "next/link";
-import Item from "./item";
 import Itemlist from "./item-list";
 import Newitem2 from "./new-item";
 import itemsData from './itemsData.json';
@@ -14,7 +12,7 @@ export default function Mainshoppingpage(){
     const [items, setItems] = useState(itemsData);
 
     //event handler to add a new item to "items" in the existing array
-    const handleAddItem = (Newitem2) => setItems(...items, Newitem2);
+    const handleAddItem = (Newitem2) => {setItems([...items, Newitem2])};
 
     return(
         <main>
