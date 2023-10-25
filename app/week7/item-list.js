@@ -1,6 +1,6 @@
 import itemsData from './itemsData.json';
 import { useState } from "react";
-import Item from '../week7/item';
+import Item from './item';
 
 
 export default function Itemlist({items}){
