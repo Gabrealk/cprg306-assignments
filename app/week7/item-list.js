@@ -1,9 +1,9 @@
 import itemsData from './itemsData.json';
-import { useState } from "react";
+import react, { useState } from "react";
 import Item from './item';
 
 
-export default function Itemlist({items}){
+export default function Itemlist({items, onItemsSelect}){
 
   //state variable
   const [sortBy, setSortBy] = useState("name");
@@ -61,7 +61,7 @@ export default function Itemlist({items}){
       </div>
 
       <section>
-        {itemArray.map((item) => (<Item item={item} key={item.id}/>))}
+        {itemArray.map((item) => (<Item item={item} key={item.id} onSelect={onItemsSelect}/>))}
       </section>
 
     </main>

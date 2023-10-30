@@ -15,6 +15,16 @@ export default function Mainshoppingpage(){
     //event handler to add a new item to "items" in the existing array
     const handleAddItem = (Newitem2) => {setItems([...items, Newitem2])};
 
+    //state variable for selected items
+    const [selectedItemName, setSelectedItemName] = useState("");
+
+    //event handler for the selected items
+    const handleItemSelect = (selectedItemName) => {
+        //clean up selected item name
+        const cleanedName = selectedItemName.name.split(',')[0].trim();
+        setSelectedItemName(cleanedName);
+    };
+
     return(
         <main>
             <font size = "10"><h1>SHOPPING LIST: </h1></font>
@@ -23,7 +33,9 @@ export default function Mainshoppingpage(){
             <Newitem2 onAddItem={handleAddItem}/>
 
             {/*the items from the handler get passed here into the Itemlist*/}
-            <Itemlist items={items}/>
+            <Itemlist items={items} onItemsSelect={handleItemSelect}/>
+
+            <mealList ingredient={selectedItemName} />
 
             <button className="font-bold 
                 px-7 py-2 
