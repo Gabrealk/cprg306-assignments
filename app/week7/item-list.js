@@ -61,7 +61,7 @@ export default function Itemlist({items}){
       </div>
 
       <section>
-        {itemArray.map((item) => (<Item item={item} key={item.id} />))}
+        {itemArray.map((item) => (<Item item={item} key={item.id}/>))}
       </section>
 
     </main>

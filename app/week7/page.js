@@ -4,6 +4,7 @@ import Link from "next/link";
 import Itemlist from "./item-list";
 import Newitem2 from "./new-item";
 import itemsData from './itemsData.json';
+import mealList from "./meal-ideas";
 
 
 export default function Mainshoppingpage(){
