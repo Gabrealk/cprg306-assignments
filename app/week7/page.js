@@ -4,24 +4,25 @@ import Link from "next/link";
 import Itemlist from "./item-list";
 import Newitem2 from "./new-item";
 import itemsData from './itemsData.json';
-import mealList from "./meal-ideas";
+import MealList from "./meal-ideas";
+
 
 
 export default function Mainshoppingpage(){
 
     //initializing a variable named items from the data from the json file
     const [items, setItems] = useState(itemsData);
+    //state variable for selected items
+    const [selectedItemName, setSelectedItemName] = useState("");
 
     //event handler to add a new item to "items" in the existing array
     const handleAddItem = (Newitem2) => {setItems([...items, Newitem2])};
 
-    //state variable for selected items
-    const [selectedItemName, setSelectedItemName] = useState("");
 
     //event handler for the selected items
     const handleItemSelect = (selectedItemName) => {
         //clean up selected item name
-        const cleanedName = selectedItemName.name.split(',')[0].trim();
+        const cleanedName = selectedItemName.name.split(",")[0].trim();
         setSelectedItemName(cleanedName);
     };
 
@@ -30,12 +31,13 @@ export default function Mainshoppingpage(){
             <font size = "10"><h1>SHOPPING LIST: </h1></font>
             <font size="5"><h2 className="font-bold pl-2">Add A New Item</h2></font>
             {/*uses the event handler into the newitem2*/}    
-            <Newitem2 onAddItem={handleAddItem}/>
+            <Newitem2 onAddItem={(item) => handleAddItem(item)} />
 
             {/*the items from the handler get passed here into the Itemlist*/}
             <Itemlist items={items} onItemsSelect={handleItemSelect}/>
 
-            <mealList ingredient={selectedItemName} />
+            
+            <MealList ingredient={selectedItemName}/>
 
             <button className="font-bold 
                 px-7 py-2 

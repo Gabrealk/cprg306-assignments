@@ -1,3 +1,4 @@
+import React from "react";
 
 //Updated item function, where the whole item is declared , and the styling is input here rather than repeating it
 //updated through learning from week 5! and communicating with different classmates to improve my efficiency and cleanliness through suggestions and tips

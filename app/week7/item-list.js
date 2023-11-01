@@ -1,5 +1,6 @@
-import itemsData from './itemsData.json';
-import react, { useState } from "react";
+"use client";
+
+import React, { useState } from "react";
 import Item from './item';
 
 
@@ -13,7 +14,6 @@ export default function Itemlist({items, onItemsSelect}){
 
   // Sort the items array based on the sortBy state variable
   itemArray.sort((a, b) => {
-
     //if sortby == name then true and compares a to b returning true displaying a sorting of names
     if (sortBy === "name") {
       return a.name.localeCompare(b.name);
@@ -61,7 +61,7 @@ export default function Itemlist({items, onItemsSelect}){
       </div>
 
       <section>
-        {itemArray.map((item) => (<Item item={item} key={item.id} onSelect={onItemsSelect}/>))}
+        {itemArray.map((item) => (<Item item={item} key={item.id} onSelect={() => onItemsSelect(item)}/>))}
       </section>
 
     </main>
