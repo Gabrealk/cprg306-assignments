@@ -29,15 +29,21 @@ export default function Mainshoppingpage(){
     return(
         <main>
             <font size = "10"><h1>SHOPPING LIST: </h1></font>
-            <font size="5"><h2 className="font-bold pl-2">Add A New Item</h2></font>
-            {/*uses the event handler into the newitem2*/}    
-            <Newitem2 onAddItem={(item) => handleAddItem(item)} />
+                <font size="5"><h2 className="font-bold pl-2">Add A New Item</h2></font>
+                {/*uses the event handler into the newitem2*/}    
+                <Newitem2 onAddItem={(item) => handleAddItem(item)} />
 
-            {/*the items from the handler get passed here into the Itemlist*/}
-            <Itemlist items={items} onItemsSelect={handleItemSelect}/>
+            <div className="flex">
 
+                {/*the items from the handler get passed here into the Itemlist*/}
+                <Itemlist items={items} onItemsSelect={handleItemSelect}/>
+
+                <div >
+                <MealList ingredient={selectedItemName}/>
+                </div>
+            </div>
             
-            <MealList ingredient={selectedItemName}/>
+            
 
             <button className="font-bold 
                 px-7 py-2 

@@ -1,6 +1,12 @@
 "use client";
 import React, {useEffect, useState } from "react";
 
+function displayMealIngredients(mealId) {
+    //loop through the meals state
+    // find the meal by meal id
+    // get list of ingredients from that meal object
+    //return a custom array with the list of ingredients for that meal
+}
 
 export default function MealList({ingredient}){
 
@@ -22,6 +28,8 @@ export default function MealList({ingredient}){
         }
     };
 
+    
+
 
     useEffect(() => 
     {
@@ -36,7 +44,7 @@ export default function MealList({ingredient}){
         <h2>Meal ideas with {ingredient}:</h2>
             <ul>
                 {meals && meals.map((meal) =>
-                <li key={meal.idmeal}> {meal.strMeal} </li>)}
+                <li onClick={() => displayMealIngredients(meal.idmeal)} key={meal.idmeal}> {meal.strMeal} </li>)}
             </ul>
             
         </main>
