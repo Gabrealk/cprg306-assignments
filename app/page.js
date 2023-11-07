@@ -71,7 +71,7 @@ export default function Home()
                 bg-blue-700 
                 border-2 border-black m-4 rounded 
                 hover:bg-blue-500">
-          <p><Link href="week7">Week 7 **In Construction**</Link></p>
+          <p><Link href="week7">Week 7</Link></p>
         </button>
       </div>
 
@@ -82,7 +82,7 @@ export default function Home()
                 bg-blue-700 
                 border-2 border-black m-4 rounded 
                 hover:bg-blue-500">
-          <p><Link href="week8">Week 8</Link></p>
+          <p><Link href="week8">Week 8 **construction**</Link></p>
         </button>
       </div>
 
