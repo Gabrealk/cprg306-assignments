@@ -82,7 +82,18 @@ export default function Home()
                 bg-blue-700 
                 border-2 border-black m-4 rounded 
                 hover:bg-blue-500">
-          <p><Link href="week8">Week 8 **construction**</Link></p>
+          <p><Link href="week8">Week 8</Link></p>
+        </button>
+      </div>
+
+      <div>
+        <button className="font-bold 
+                px-7 py-2 
+                text-black 
+                bg-blue-700 
+                border-2 border-black m-4 rounded 
+                hover:bg-blue-500">
+          <p><Link href="week10">Week 10 **construction**</Link></p>
         </button>
       </div>
 
