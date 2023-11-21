@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useUserAuth } from "./_utils/auth-context";
 
 
@@ -34,7 +35,17 @@ export default function Page() {
             <section>
                 { user ? (
                     <div>
-                        <p>Welcome, {user.email}</p>
+                        <p>Welcome, {user.displayName} | {user.email}</p>
+                        <img src={user.photoURL} width="50"/>
+                        <p>Your user ID is: {user.uid}</p>
+                        <button className="font-bold 
+                            px-7 py-2 
+                            text-black 
+                            bg-green-400 
+                            border-2 border-black m-4 rounded 
+                            hover:bg-green-700">
+                        <Link href="/week10/shopping-list">shopping list page</Link></button>
+
                         <button className="text-lg m-2 hover:underline" onClick={handleSignOut}>
                             sign out
                         </button>
